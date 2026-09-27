@@ -1,0 +1,320 @@
+/* Digital Heritage Archive - Royal Heritage Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+    --bg-dark: #070a12;
+    --card-bg: rgba(15, 23, 42, 0.85);
+    --card-bg-light: rgba(30, 41, 59, 0.7);
+    --border-color: rgba(212, 175, 55, 0.28);
+    --border-bright: rgba(251, 191, 36, 0.6);
+    --gold-primary: #d4af37;
+    --gold-bright: #fbbf24;
+    --gold-light: #fef3c7;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --emerald: #10b981;
+    --sapphire: #3b82f6;
+}
+
+/* Base Body Styles */
+.stApp {
+    background: radial-gradient(circle at 10% 20%, #0c1424 0%, #05070d 95%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
+}
+
+/* Heritage Headings */
+h1, h2, h3, .heritage-heading {
+    font-family: 'Cinzel', serif !important;
+    letter-spacing: 0.05em;
+    color: var(--gold-bright) !important;
+    text-shadow: 0 2px 12px rgba(212, 175, 55, 0.25);
+}
+
+/* Glassmorphism Cards */
+.heritage-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-bottom: 16px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.heritage-card:hover {
+    border-color: var(--border-bright);
+    box-shadow: 0 12px 40px 0 rgba(212, 175, 55, 0.15);
+}
+
+/* Document Viewer Specific Components */
+.doc-viewer-header {
+    background: linear-gradient(135deg, rgba(20, 30, 55, 0.9) 0%, rgba(10, 15, 28, 0.95) 100%);
+    border: 1px solid var(--border-color);
+    border-top: 3px solid var(--gold-bright);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.meta-item {
+    background: rgba(11, 17, 32, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.meta-label {
+    font-size: 0.75rem;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.meta-value {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.transcript-pane {
+    background: rgba(10, 15, 26, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    white-space: pre-wrap;
+    max-height: 480px;
+    overflow-y: auto;
+}
+
+.ai-summary-box {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid rgba(251, 191, 36, 0.4);
+    border-left: 4px solid var(--gold-bright);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    line-height: 1.6;
+}
+
+/* Metric Badges */
+.heritage-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid var(--gold-primary);
+    border-radius: 6px;
+    color: var(--gold-light);
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 6px;
+}
+
+.badge-emerald {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid var(--emerald);
+    color: #6ee7b7;
+}
+
+.badge-sapphire {
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid var(--sapphire);
+    color: #93c5fd;
+}
+
+/* Citation Box */
+.citation-box {
+    background: rgba(15, 23, 42, 0.9);
+    border-left: 4px solid var(--gold-bright);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+    font-family: 'Inter', sans-serif;
+    color: #e2e8f0;
+}
+
+/* Sidebar Customization */
+[data-testid="stSidebar"] {
+    background-color: #080d1a;
+    border-right: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* ==========================================================================
+   Creative Heritage Login & Authentication System
+   ========================================================================== */
+
+.auth-hero-banner {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    margin-bottom: 24px;
+}
+
+.auth-glass-card {
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid rgba(251, 191, 36, 0.35);
+    border-radius: 16px;
+    padding: 32px 28px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.auth-glass-card:hover {
+    border-color: rgba(251, 191, 36, 0.65);
+    box-shadow: 0 20px 55px rgba(212, 175, 55, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.auth-brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 30px;
+    padding: 6px 16px;
+    color: #fbbf24;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+}
+
+.heritage-pillar-icon {
+    font-size: 2.4rem;
+    color: #fbbf24;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+    margin-bottom: 8px;
+}
+
+.heritage-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fef08a;
+    letter-spacing: 0.04em;
+    margin: 0;
+    text-shadow: 0 2px 14px rgba(212, 175, 55, 0.3);
+}
+
+.heritage-subtitle {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 18px;
+}
+
+.heritage-quote-card {
+    background: linear-gradient(135deg, rgba(20, 30, 55, 0.92) 0%, rgba(10, 15, 28, 0.95) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-left: 4px solid #fbbf24;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.quote-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #fef3c7;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-size: 0.9rem;
+    color: #fbbf24;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-align: right;
+}
+
+.value-pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0 20px 0;
+}
+
+.value-pill {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fbbf24;
+    transition: all 0.2s ease;
+}
+
+.value-pill:hover {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #fbbf24;
+    transform: translateY(-2px);
+}
+
+.sso-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0 16px 0;
+    color: #64748b;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.sso-divider::before,
+.sso-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.sso-divider:not(:empty)::before {
+    margin-right: .75em;
+}
+
+.sso-divider:not(:empty)::after {
+    margin-left: .75em;
+}
+
+.profile-card-active {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

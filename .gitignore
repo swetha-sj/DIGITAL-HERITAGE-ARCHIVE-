@@ -1,0 +1,107 @@
+# ==============================================================================
+# Digital Heritage Archive - Git Ignore Configuration
+# ==============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# IDE & Editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Unit Test / Coverage reports
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Logs & Temporary Files
+*.log
+*.tmp
+*.bak
+scratch/
+
+# Generated Runtime Databases & FAISS Vector Indexes
+data/db/*.db
+data/db/*.sqlite3
+data/vector_store/*.bin
+data/vector_store/*.json
+!data/vector_store/.gitkeep
+!data/db/.gitkeep
+
+# Temporary Uploaded & Processed Files
+data/raw_documents/*
+!data/raw_documents/.gitkeep
+data/processed_images/*
+!data/processed_images/.gitkeep
+data/audio_video/tts_cache/*
+!data/audio_video/tts_cache/.gitkeep
+data/audio_video/*.wav
+data/audio_video/*.mp3
+!data/audio_video/.gitkeep
+data/multimedia/audio/tts_*
+data/multimedia/audio/test_*
+data/multimedia/images/ingest_test_*
+data/multimedia/images/test_*
+data/multimedia/video/test_*
+!data/multimedia/**/.gitkeep
+!data/multimedia/.gitkeep
+
+# Note: Important assets, sample datasets (data/sample_data/*),
+# test assets (data/test_samples/*), config, and UI files are tracked.

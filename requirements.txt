@@ -1,0 +1,33 @@
+# Digital Heritage Archive - Core Dependencies
+# National Heritage Platform • Ministry of Culture
+
+# Web Framework & Visualization
+streamlit>=1.35.0
+plotly>=5.20.0
+streamlit-extras>=0.4.0
+
+# Document & Image Processing
+PyMuPDF>=1.23.0
+Pillow>=10.0.0
+opencv-python-headless>=4.8.0
+numpy>=1.24.0
+
+# OCR
+pytesseract>=0.3.10
+
+# Text Processing & Translation
+deep-translator>=1.11.4
+regex>=2023.12.25
+
+# Speech
+pyttsx3>=2.90
+
+# Embeddings, Vector Search & LLMs
+sentence-transformers>=2.3.0
+faiss-cpu>=1.7.4
+transformers>=4.38.0
+torch>=2.1.0
+
+# Data & Environment
+pandas>=2.0.0
+python-dotenv>=1.0.0
